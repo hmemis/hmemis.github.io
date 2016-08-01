@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://hmemis.github.io/atom.xml" rel="self"/>
   <link href="http://hmemis.github.io/"/>
-  <updated>2016-07-29T17:46:08+03:00</updated>
+  <updated>2016-08-01T16:04:53+03:00</updated>
   <id>http://hmemis.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,236 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby on Rails Ile Ilgili Genel Bilgi]]></title>
+    <link href="http://hmemis.github.io/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi/"/>
+    <updated>2016-07-31T21:11:14+03:00</updated>
+    <id>http://hmemis.github.io/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi</id>
+    <content type="html"><![CDATA[<p> RUBY ON RAİLS İLE İLGİLİ GENEL BİLGİ</p>
+
+<p> Öncelikle bir süredir kullandığım Ruby dili ile yazılmış Ruby on Rails framework ünü tanımakla başlayalım.Daha sonra Rails'in tarihçesini, yapısını ve sonrasında Rails MVC (Model View Controller) yapısını inceleyelim.
+ Ruby nesne tabanlı bir programlama dili olup oldukça sade ve kısa bir sözdizimine (syntax) sahiptir. Zaten Ruby’nin temelinde bu sadelik ve kısalık söz konusudur. Karmaşık kodlar yerine gelişmiş uygulamaları kısa yoldan gerçekleştirebilir.
+ Ruby on Rails ise, David Heinemeir Hansson’un başını çektiği Ruby dili ile yazılmış open source frameworktür. Şu an 3.2.RC1 versiyonu ortalıkta dolaşmaktadır. Ancak en güvenilir versiyon şu an için 3.1.1 dir.
+ Bizde kendi ruby versiyonumuzu terminal yardımıyla öğrenebiliriz.Aşağıdaki komutu terminale yazalım.
+ <br><code>-$ ruby -version</code><br></p>
+
+<p> Buradaki sayıların ne anlama geldiğine ve ne zamanlar değiştiğini inceleyelim.
+ ruby 3.2.1 diye görüken ruby versiyonunda
+ 3 sayısı yapısal değişiklikleri gösterir ve yapısal değişiklik olunca versiyonumuz artık ruby 4.0.0 olarak gözükür.
+ 2 sayısı yeni özellik eklenince değişir.Örneğin ruby 3.3.1
+ 1 sayısı ise hataları gösterir.Hatalar düzelince sayı artmaya devam eder.</p>
+
+<p> Peki neden diğer programlama dilleri yerine Ruby On Rails’i tercih edeyim diyecek olursanız, bunun cevabı Ruby’nin sözdizimi. Düşünsenize diğer dillerle 50 satırda gerçekleştireceğiniz işlemleri bu dil sayesinde 10 satıra indirgeyebiliyorsunuz. Ayrıca bu 10 satır diğerlerine göre çok daha sade ve basit oluyor.
+ Rails’in fark yaratan bir diğer özelliği ise, web’i gerçekten anlayan geliştiriciler tarafından yaratılmış olması.
+ Ruby on Rails’in yaratıcısı David Heinemeier Hansson “agile software development” (çevik yazılım geliştirme) manifestosunda da imzası olan, DRY (Don’t Repeat Yourself), pragmatik programlama gibi felsefeleri takip eden yaratıcı ve ödüllü bir programcı.</p>
+
+<p>Hansson’un railsde bir araya getirdiği teknik ve paradigmalardan bazıları:</p>
+
+<pre><code>MVC – Model / View / Controller (JSP kullananlar bilirler)
+ORM – Object Relational Mapping veritabanı arabirimi (Rails’de ActiveRecord olarak geçiyor)
+REST – REpresentational State Transfer
+DRY – Don’t Repeat Yourself
+Agile Programming
+Pragmatic Programming
+</code></pre>
+
+<p> Şimdi Rails ile yeni bir projeye nasıl başlanır onu görelim.Terminale aşağıdaki komutu yazalım.
+ <br><code>-$ rails new blog</code><br>
+ Komut sayesinde Rails projemize başlamış sayılıyoruz.Daha sonra aşağıdaki komut ile Rails projemizin içine giriyoruz.
+ <br><code>-$ cd blog</code><br>
+ Sonrasında aşağıdaki komut ile yazdığımız ve enterladığımız anda gerekli databaseler bizim için oluşmuş oluyor.
+ <br><code>-$ rake db:migrate</code><br>
+ Son olarak Rails projemizi görmek için aşağıdaki komutu terminale yazıyoruz
+ <br><code>-$ rails s</code><br>
+ Ve artık projemizi görebiliriz.Bunun için arama motoruna <a href="http://localhost:3000">http://localhost:3000</a> yazarız.</p>
+
+<p> Şimdi projemizin dosyalarını inceleyelim.</p>
+
+<pre><code>Gemfile =&gt; Proje içinde kullanılan gemlerin buludunğu dosyadır. Yüklemek istediğiniz gemleri buraya yazarsınız.
+README =&gt; Klasik Readme .txt dosyasıdır. Proje ile ilgili detayları buraya yazabilirsiniz.
+Rakefile =&gt; Konsolda rake işlemlerini gerçekleştirmek için gerekli olan dosyaların bulunduğu yerdir.
+app =&gt; Rails projesinin çekirdeği buradadır. Controller, Model, View, Helper, Assets ler burada saklanır. Bu klasörlerin ne işe yaradığına yeri geldikçe anlatacağım.
+config =&gt; Runtime, databasei ve daha fazla ayarların ve düzenlemelerin yapıldığı dosyadır.
+config.ru =&gt; Rack tabanlı serverlerin çalışması için gerekli dosyadır.
+db =&gt; Database şemalarının ve database yapısının tutulduğu yerdir.
+doc =&gt; Derinlemesine dökümantasyonların olduğu klasördür.
+lib =&gt; Daha fazla modulün bulunduğu klasördür.
+log =&gt; Uygulamanın loglarının tutulduğu dosyadır.
+public =&gt; Static dosyaların ve son kullanıcı ekranlarının bulunduğu klasördür.
+script =&gt; Adından anlaşılacağı gibi Rails scriptlerinin ve daha sonra bizlerin yazdığı scriptlerin bulunduğu klasördür.
+test =&gt; Test dosyalarının ve diğer test durumlarının bulunduğu bölümdür.
+tmp =&gt; Temporary dosyalarını barındırır.
+vendor =&gt; Ruby gemlerini ve Rails’in kaynak kodunu kapsayan bölümdür. Daha çok sonraki eklentileri içerir.
+</code></pre>
+
+<p> Evet sonuç itibari ile temel bir Rails projesi dosya dizimi bu şekilde oluşur. Bu klasörlerin içinde genel dosyalar vardır</p>
+
+<p> Birazda Rails - MVC yapısını inceleyelim.Rails’te model katmanı veritabanı ile olan ilişkilerden sorumludur. Genellikle her bir model, bir veritabanı tablosu ile iletişim halindedir. Model, tablo üzerinde CRUD yani Create, Read, Update ve Delete işlerini yapar. Örneğin tabloda arama yapmak için şöyle bir sorgu kullanırız:</p>
+
+<p>  Model.where(:name => &lsquo;model_name&rsquo;).first</p>
+
+<p> Controller MVC modelinin en önemli kısmıdır. Rails’de controller, dış dünyadan yani kullanıcıdan istekleri kabul eder, gerekli işlemleri uygular ve sonuçları view katmanına gönderir. Web istekleri, değişkenlerin ve verilerin işlenmesi, çeşitli bilgiler için Model’e başvurulması, işlenen verilerin kayıt için tekrar Model’e yollanması gibi işlerin hepsi Controller sorumluluğundadır. Controller genellikle Model üzerindeki CRUD işlemlerini idare eder, view’da kullanılacak değişkenleri düzenler.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="k">def</span> <span class="nf">index</span>
+</span><span class='line'>    <span class="c1"># logic to list all recipes</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">show</span>
+</span><span class='line'>    <span class="c1"># logic to show a particular recipe</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">create</span>
+</span><span class='line'>    <span class="c1"># logic to create a new recipe</span>
+</span><span class='line'>  <span class="k">end</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">def</span> <span class="nf">update</span>
+</span><span class='line'>    <span class="c1"># logic to update a particular recipe</span>
+</span><span class='line'>  <span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> MVC yapısında View, uygulamanın kullanıcıya görünen yüzüdür. View’ın, Model ile yapacağı herhangi bir iletişim mutlaka Controller üzerinden gerçekleştirilmelidir! Bu sayede hem view temiz kalmış olur hemde MVC çatısından kopmamış oluruz.</p>
+
+<p>View, bizim model nesnelerimizin kullanıcıya sunulması ve formatlanmasından sorumludur. Kullanıcıya sunduğu formlar, input kutuları, butonlar vb. ile kullanıcıyla iletişime girerler.</p>
+
+<p>Rails yapısında birde Controller ve View’ı birbirine kolayca bağlamak için “helper”lar kullanılır. Helper’lar sayesinde örneğin bir kayıt validasyon kurallarından geçemediyse ve kullanıcıya hata göstermemiz gerekiyorsa Helper’lardan yararlanabiliriz.</p>
+
+<p> Son olarakta Rails'i oluşturan kütüphanelerden bahsedelim.
+Active Record: Veritabanı ile iletişimi yönetir.</p>
+
+<p>Action View: HTML dosyalarını oluşturan templating sistemidir ve kullanıcıdan aldığı girdileri Rails uygulamasına paslar.</p>
+
+<p>Action Controller: Hem uygulama akışını hemde veritabanından gelerek view’da gösterilecek olan verileri yönetir.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Haml - Html - Css]]></title>
+    <link href="http://hmemis.github.io/blog/2016/07/31/haml-html-css/"/>
+    <updated>2016-07-31T18:24:39+03:00</updated>
+    <id>http://hmemis.github.io/blog/2016/07/31/haml-html-css</id>
+    <content type="html"><![CDATA[<p>HAML-HTML-CSS-SASS-COMPASS</p>
+
+<p> HTML, Hyper Text Markup Language cümlesinin kısaltmasıdır ve hypertext işaret dili anlamınada gelir.</p>
+
+<p> HTML dosyası temelde bir text dosyası olmasına karşın işaretlenmiş kelimeler (tag'lar - Etiketler) sayesinde görsellik kazanır.</p>
+
+<p> Oluşturulan bu dosyanın tarayıcıda (browser) görsellik kazanabilmesi için uzantısının HTM veya HTML olması gereklidir.</p>
+
+<p> Basit bir Html sayfası oluşturmak kolaydır.Fakat yazılan kodlar uzadıkça html ile kod yazmakta zorlaşır.Html den daha kolay yazılan haml dili yardımımıza gelir.</p>
+
+<p> HAML, Rails uygulamaları için geliştirilmiş görüntüleme dili. Kendini tekrar etmeyen ve sadeliği ile öne çıkan bu dili okumakta öğrenmekte çok kolay. Felsefi olarak güzel olanın basit olması gerektiğine inanan HAML geliştircileri, HAML için gerçek sorunların gerçek çözümü olduğunu söylüyor.</p>
+
+<p> Basit bir HAML sayfası .haml uzantısı olarak karşımıza çıkıyor ve yazımı, içeriği HTML’den çok farklı. Bir kere tag olayı ortadan kalkıyor. Bir örnek ile görelim</p>
+
+<p>HTML kodu :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">”profile”</span><span class="nt">&gt;</span>
+</span><span class='line'><span class="nt">&lt;div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">”date”</span><span class="nt">&gt;</span><span class="err">&lt;</span>%= print_date %&gt;<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">”address”</span><span class="nt">&gt;</span><span class="err">&lt;</span>%= current_user.address %&gt;<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">”email”</span><span class="nt">&gt;</span><span class="err">&lt;</span>%= current_user.email %&gt;<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">”bio”</span><span class="nt">&gt;</span><span class="err">&lt;</span>%= current_user.bio %&gt;<span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>HAML kodu :</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='haml'><span class='line'><span class="nf">#profile</span>
+</span><span class='line'><span class="nc">.left.column</span>
+</span><span class='line'><span class="nf">#date</span><span class="p">=</span> <span class="n">print_date</span>
+</span><span class='line'><span class="nf">#address</span><span class="p">=</span> <span class="n">current_user</span><span class="o">.</span><span class="n">address</span>
+</span><span class='line'><span class="nc">.right.column</span>
+</span><span class='line'><span class="nf">#email</span><span class="p">=</span> <span class="n">current_user</span><span class="o">.</span><span class="n">email</span>
+</span><span class='line'><span class="nf">#bio</span><span class="p">=</span> <span class="n">current_user</span><span class="o">.</span><span class="n">bio</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Ayrıca <a href="https://html2haml.herokuapp.com/">https://html2haml.herokuapp.com/</a> sitesi sayesinde html kodlarımızı haml koduna çevirebiliyoruz.</p>
+
+<p> Şimdide html ve css farkını inceleyelim.Css yani &lsquo;Cascading Style Sheets&rsquo; yani &lsquo;Basamaklı Stil Sayfası&rsquo; HTML'in ihtiyaçlarımızı karşılamadığı noktada devreye girer. Html elementlerinin üzerinde düzenleme yapmamızı sağlar. CSS, HTML belgeleri düzenini tamamlayan bir stil dilidir.Örneğin,  yazı tipleri, renkler, kenar boşlukları, çizgiler, yükseklik, genişlik, arka plan görüntüleri, gelişmiş pozisyonları ve diğer pek çok özelliğin düzenlenmesini kapsar. HTML'den daha fazla seçenek sunuyor ve daha gelişmiş görünüyor.</p>
+
+<p> Css te en çok karıştırılan id ve class sorununa değinelim birazda ID, tek bir element için kullanılır. Genellikle header, footer, navbar, sidebar gibi tekrar etmeyen alanları tanımlamak için kullanılır. Her sayfada ortak olarak kullanılan ID olabilir (header, footer, &hellip;) ancak tek sayfada aynı isimde birden fazla ID olmamalıdır. Çünkü hem W3C kurallarına uymaz hem de Javascript kullanacağımız zaman aynı isimde ID varsa karışıklığa yol açar.Class'larda ID'lere benzer lakin amaçları farklıdır. ID'nin aksine tek sayfa içerisinde birçok kez tanımlanabilir. Sayfa içerisinde aynı özellikleri taşıyan yerler varsa özellikle yazı stilleri gibi (örneğin; başlıkların aynı renkte ya da boyutta olduğu yerler) Class kullanılmalıdır.</p>
+
+<p>CSS de ID # (diyez) işareti ile kullanılır.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nf">#idismi</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">position</span><span class="o">:</span><span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">left</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">top</span><span class="o">:</span><span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">width</span><span class="o">:</span><span class="m">150px</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>CSS de class .(nokta) işareti ile kullanılır.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.menu</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="k">font-size</span><span class="o">:</span><span class="m">14px</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">color</span><span class="o">:</span><span class="m">#ff0000</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Nerede Class Nerede ID Kullanmalıyım?</p>
+
+<p>Bunu örnekle açıklamak istiyorum. Varsayalım kütüphane açacağız. Öncelikle kitaplarımızı felsefe, psikoloji, polisiye &hellip; gibi kategorilere bölmemiz gerekir ve kütüphanemizde bu kitaplara özel raflar oluşturmalıyız. İşte kitaplara özel oluşturulan bu raflara ID diyoruz. Her kitabın sayfa sayısı, yazı büyüklüğü, ebatları farklıdır. Değişik kitaplar aynı rafta toplanmıştır ve bu işleme de Class diyoruz.</p>
+
+<p> CSS’ de bulunmayan bazı özellikleride SASS te bulabiliriz örneğin değişken (variables) tanımlama, iç içe (nesting) olarak hazırlanmış seçiciler oluşturmak, css kodlarınızı yeniden kullanılabilir ve parametrik olarak çalışabilen parçalara bölmek (mixin), bir css tanımlamasının başka bir css tanımlamasından miras almasını sağlayan seçici kalıtımı (selector inheritance) yapmak için kullanılır.</p>
+
+<p> Son olarakta Sass’ın araç kutusu gibi olan compassa değinelim. Önek sorununa çözüm oluşturan mixinleri, otomatik sprite yapma imkanı, dikey hizalama kolaylıkları, kolay ızgara sayfa planları sunan bir Sass araç kutusu olarak tanımlanabilir. Ayrıca eklenti desteği yardımı ile daha fazla geliştirilebilen bir araç kutusu.</p>
+]]></content>
+  </entry>
   
 </feed>

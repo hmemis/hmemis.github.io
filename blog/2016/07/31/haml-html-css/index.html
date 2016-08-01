@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>Haml - Html - Css - My Octopress Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="RUBY ON RAİLS İLE İLGİLİ GENEL BİLGİ Öncelikle bir süredir kullandığım Ruby dili ile yazılmış Ruby on Rails framework ünü tanımakla başlayalım.Daha &hellip;">
+  <meta name="description" content="HAML-HTML-CSS-SASS-COMPASS HTML, Hyper Text Markup Language cümlesinin kısaltmasıdır ve hypertext işaret dili anlamınada gelir. HTML dosyası temelde &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://hmemis.github.io/">
+  <link rel="canonical" href="http://hmemis.github.io/blog/2016/07/31/haml-html-css/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -63,153 +63,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi/">Ruby on Rails Ile Ilgili Genel Bilgi</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-<time class='entry-date' datetime='2016-07-31T21:11:14+03:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>9:11 pm</span></time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p> RUBY ON RAİLS İLE İLGİLİ GENEL BİLGİ</p>
-
-<p> Öncelikle bir süredir kullandığım Ruby dili ile yazılmış Ruby on Rails framework ünü tanımakla başlayalım.Daha sonra Rails'in tarihçesini, yapısını ve sonrasında Rails MVC (Model View Controller) yapısını inceleyelim.
- Ruby nesne tabanlı bir programlama dili olup oldukça sade ve kısa bir sözdizimine (syntax) sahiptir. Zaten Ruby’nin temelinde bu sadelik ve kısalık söz konusudur. Karmaşık kodlar yerine gelişmiş uygulamaları kısa yoldan gerçekleştirebilir.
- Ruby on Rails ise, David Heinemeir Hansson’un başını çektiği Ruby dili ile yazılmış open source frameworktür. Şu an 3.2.RC1 versiyonu ortalıkta dolaşmaktadır. Ancak en güvenilir versiyon şu an için 3.1.1 dir.
- Bizde kendi ruby versiyonumuzu terminal yardımıyla öğrenebiliriz.Aşağıdaki komutu terminale yazalım.
- <br><code>-$ ruby -version</code><br></p>
-
-<p> Buradaki sayıların ne anlama geldiğine ve ne zamanlar değiştiğini inceleyelim.
- ruby 3.2.1 diye görüken ruby versiyonunda
- 3 sayısı yapısal değişiklikleri gösterir ve yapısal değişiklik olunca versiyonumuz artık ruby 4.0.0 olarak gözükür.
- 2 sayısı yeni özellik eklenince değişir.Örneğin ruby 3.3.1
- 1 sayısı ise hataları gösterir.Hatalar düzelince sayı artmaya devam eder.</p>
-
-<p> Peki neden diğer programlama dilleri yerine Ruby On Rails’i tercih edeyim diyecek olursanız, bunun cevabı Ruby’nin sözdizimi. Düşünsenize diğer dillerle 50 satırda gerçekleştireceğiniz işlemleri bu dil sayesinde 10 satıra indirgeyebiliyorsunuz. Ayrıca bu 10 satır diğerlerine göre çok daha sade ve basit oluyor.
- Rails’in fark yaratan bir diğer özelliği ise, web’i gerçekten anlayan geliştiriciler tarafından yaratılmış olması.
- Ruby on Rails’in yaratıcısı David Heinemeier Hansson “agile software development” (çevik yazılım geliştirme) manifestosunda da imzası olan, DRY (Don’t Repeat Yourself), pragmatik programlama gibi felsefeleri takip eden yaratıcı ve ödüllü bir programcı.</p>
-
-<p>Hansson’un railsde bir araya getirdiği teknik ve paradigmalardan bazıları:</p>
-
-<pre><code>MVC – Model / View / Controller (JSP kullananlar bilirler)
-ORM – Object Relational Mapping veritabanı arabirimi (Rails’de ActiveRecord olarak geçiyor)
-REST – REpresentational State Transfer
-DRY – Don’t Repeat Yourself
-Agile Programming
-Pragmatic Programming
-</code></pre>
-
-<p> Şimdi Rails ile yeni bir projeye nasıl başlanır onu görelim.Terminale aşağıdaki komutu yazalım.
- <br><code>-$ rails new blog</code><br>
- Komut sayesinde Rails projemize başlamış sayılıyoruz.Daha sonra aşağıdaki komut ile Rails projemizin içine giriyoruz.
- <br><code>-$ cd blog</code><br>
- Sonrasında aşağıdaki komut ile yazdığımız ve enterladığımız anda gerekli databaseler bizim için oluşmuş oluyor.
- <br><code>-$ rake db:migrate</code><br>
- Son olarak Rails projemizi görmek için aşağıdaki komutu terminale yazıyoruz
- <br><code>-$ rails s</code><br>
- Ve artık projemizi görebiliriz.Bunun için arama motoruna <a href="http://localhost:3000">http://localhost:3000</a> yazarız.</p>
-
-<p> Şimdi projemizin dosyalarını inceleyelim.</p>
-
-<pre><code>Gemfile =&gt; Proje içinde kullanılan gemlerin buludunğu dosyadır. Yüklemek istediğiniz gemleri buraya yazarsınız.
-README =&gt; Klasik Readme .txt dosyasıdır. Proje ile ilgili detayları buraya yazabilirsiniz.
-Rakefile =&gt; Konsolda rake işlemlerini gerçekleştirmek için gerekli olan dosyaların bulunduğu yerdir.
-app =&gt; Rails projesinin çekirdeği buradadır. Controller, Model, View, Helper, Assets ler burada saklanır. Bu klasörlerin ne işe yaradığına yeri geldikçe anlatacağım.
-config =&gt; Runtime, databasei ve daha fazla ayarların ve düzenlemelerin yapıldığı dosyadır.
-config.ru =&gt; Rack tabanlı serverlerin çalışması için gerekli dosyadır.
-db =&gt; Database şemalarının ve database yapısının tutulduğu yerdir.
-doc =&gt; Derinlemesine dökümantasyonların olduğu klasördür.
-lib =&gt; Daha fazla modulün bulunduğu klasördür.
-log =&gt; Uygulamanın loglarının tutulduğu dosyadır.
-public =&gt; Static dosyaların ve son kullanıcı ekranlarının bulunduğu klasördür.
-script =&gt; Adından anlaşılacağı gibi Rails scriptlerinin ve daha sonra bizlerin yazdığı scriptlerin bulunduğu klasördür.
-test =&gt; Test dosyalarının ve diğer test durumlarının bulunduğu bölümdür.
-tmp =&gt; Temporary dosyalarını barındırır.
-vendor =&gt; Ruby gemlerini ve Rails’in kaynak kodunu kapsayan bölümdür. Daha çok sonraki eklentileri içerir.
-</code></pre>
-
-<p> Evet sonuç itibari ile temel bir Rails projesi dosya dizimi bu şekilde oluşur. Bu klasörlerin içinde genel dosyalar vardır</p>
-
-<p> Birazda Rails - MVC yapısını inceleyelim.Rails’te model katmanı veritabanı ile olan ilişkilerden sorumludur. Genellikle her bir model, bir veritabanı tablosu ile iletişim halindedir. Model, tablo üzerinde CRUD yani Create, Read, Update ve Delete işlerini yapar. Örneğin tabloda arama yapmak için şöyle bir sorgu kullanırız:</p>
-
-<p>  Model.where(:name => &lsquo;model_name&rsquo;).first</p>
-
-<p> Controller MVC modelinin en önemli kısmıdır. Rails’de controller, dış dünyadan yani kullanıcıdan istekleri kabul eder, gerekli işlemleri uygular ve sonuçları view katmanına gönderir. Web istekleri, değişkenlerin ve verilerin işlenmesi, çeşitli bilgiler için Model’e başvurulması, işlenen verilerin kayıt için tekrar Model’e yollanması gibi işlerin hepsi Controller sorumluluğundadır. Controller genellikle Model üzerindeki CRUD işlemlerini idare eder, view’da kullanılacak değişkenleri düzenler.</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-</pre></td><td class='code'><pre><code class='ruby'><span class='line'>  <span class="k">def</span> <span class="nf">index</span>
-</span><span class='line'>    <span class="c1"># logic to list all recipes</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">show</span>
-</span><span class='line'>    <span class="c1"># logic to show a particular recipe</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">create</span>
-</span><span class='line'>    <span class="c1"># logic to create a new recipe</span>
-</span><span class='line'>  <span class="k">end</span>
-</span><span class='line'>
-</span><span class='line'>  <span class="k">def</span> <span class="nf">update</span>
-</span><span class='line'>    <span class="c1"># logic to update a particular recipe</span>
-</span><span class='line'>  <span class="k">end</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p> MVC yapısında View, uygulamanın kullanıcıya görünen yüzüdür. View’ın, Model ile yapacağı herhangi bir iletişim mutlaka Controller üzerinden gerçekleştirilmelidir! Bu sayede hem view temiz kalmış olur hemde MVC çatısından kopmamış oluruz.</p>
-
-<p>View, bizim model nesnelerimizin kullanıcıya sunulması ve formatlanmasından sorumludur. Kullanıcıya sunduğu formlar, input kutuları, butonlar vb. ile kullanıcıyla iletişime girerler.</p>
-
-<p>Rails yapısında birde Controller ve View’ı birbirine kolayca bağlamak için “helper”lar kullanılır. Helper’lar sayesinde örneğin bir kayıt validasyon kurallarından geçemediyse ve kullanıcıya hata göstermemiz gerekiyorsa Helper’lardan yararlanabiliriz.</p>
-
-<p> Son olarakta Rails'i oluşturan kütüphanelerden bahsedelim.
-Active Record: Veritabanı ile iletişimi yönetir.</p>
-
-<p>Action View: HTML dosyalarını oluşturan templating sistemidir ve kullanıcıdan aldığı girdileri Rails uygulamasına paslar.</p>
-
-<p>Action Controller: Hem uygulama akışını hemde veritabanından gelerek view’da gösterilecek olan verileri yönetir.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2016/07/31/haml-html-css/">Haml - Html - Css</a></h1>
+      <h1 class="entry-title">Haml - Html - Css</h1>
     
     
       <p class="meta">
@@ -225,7 +84,7 @@ Active Record: Veritabanı ile iletişimi yönetir.</p>
   </header>
 
 
-  <div class="entry-content"><p>HAML-HTML-CSS-SASS-COMPASS</p>
+<div class="entry-content"><p>HAML-HTML-CSS-SASS-COMPASS</p>
 
 <p> HTML, Hyper Text Markup Language cümlesinin kısaltmasıdır ve hypertext işaret dili anlamınada gelir.</p>
 
@@ -331,18 +190,46 @@ Active Record: Veritabanı ile iletişimi yönetir.</p>
 
 <p> Son olarakta Sass’ın araç kutusu gibi olan compassa değinelim. Önek sorununa çözüm oluşturan mixinleri, otomatik sprite yapma imkanı, dikey hizalama kolaylıkları, kolay ızgara sayfa planları sunan bir Sass araç kutusu olarak tanımlanabilir. Ayrıca eklenti desteği yardımı ile daha fazla geliştirilebilen bir araç kutusu.</p>
 </div>
-  
-  
 
 
-    </article>
+  <footer>
+    <p class="meta">
+      
   
-  <div class="pagination">
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-07-31T18:24:39+03:00'><span class='date'><span class='date-month'>Jul</span> <span class='date-day'>31</span><span class='date-suffix'>st</span>, <span class='date-year'>2016</span></span> <span class='time'>6:24 pm</span></time>
+      
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://hmemis.github.io/blog/2016/07/31/haml-html-css/" data-via="" data-counturl="http://hmemis.github.io/blog/2016/07/31/haml-html-css/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+        <a class="basic-alignment right" href="/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi/" title="Next Post: Ruby on Rails ile ilgili genel bilgi">Ruby on Rails ile ilgili genel bilgi &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -366,6 +253,7 @@ Active Record: Veritabanı ile iletişimi yönetir.</p>
 
   
 </aside>
+
 
     </div>
   </div>
