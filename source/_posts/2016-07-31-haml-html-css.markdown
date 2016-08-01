@@ -21,7 +21,7 @@ HAML-HTML-CSS-SASS-COMPASS
  Basit bir HAML sayfası .haml uzantısı olarak karşımıza çıkıyor ve yazımı, içeriği HTML’den çok farklı. Bir kere tag olayı ortadan kalkıyor. Bir örnek ile görelim
 
 HTML kodu :
-
+```html
 <div id=”profile”>
 <div>
 <div id=”date”><%= print_date %></div>
@@ -32,9 +32,9 @@ HTML kodu :
 <div id=”bio”><%= current_user.bio %></div>
 </div>
 </div>
-
+```
 HAML kodu :
-
+```haml
 #profile
 .left.column
 #date= print_date
@@ -42,7 +42,7 @@ HAML kodu :
 .right.column
 #email= current_user.email
 #bio= current_user.bio
-
+```
  Ayrıca https://html2haml.herokuapp.com/ sitesi sayesinde html kodlarımızı haml koduna çevirebiliyoruz.
  
  Şimdide html ve css farkını inceleyelim.Css yani 'Cascading Style Sheets' yani 'Basamaklı Stil Sayfası' HTML'in ihtiyaçlarımızı karşılamadığı noktada devreye girer. Html elementlerinin üzerinde düzenleme yapmamızı sağlar. CSS, HTML belgeleri düzenini tamamlayan bir stil dilidir.Örneğin,  yazı tipleri, renkler, kenar boşlukları, çizgiler, yükseklik, genişlik, arka plan görüntüleri, gelişmiş pozisyonları ve diğer pek çok özelliğin düzenlenmesini kapsar. HTML'den daha fazla seçenek sunuyor ve daha gelişmiş görünüyor.
@@ -50,6 +50,7 @@ HAML kodu :
  Css te en çok karıştırılan id ve class sorununa değinelim birazda ID, tek bir element için kullanılır. Genellikle header, footer, navbar, sidebar gibi tekrar etmeyen alanları tanımlamak için kullanılır. Her sayfada ortak olarak kullanılan ID olabilir (header, footer, ...) ancak tek sayfada aynı isimde birden fazla ID olmamalıdır. Çünkü hem W3C kurallarına uymaz hem de Javascript kullanacağımız zaman aynı isimde ID varsa karışıklığa yol açar.Class'larda ID'lere benzer lakin amaçları farklıdır. ID'nin aksine tek sayfa içerisinde birçok kez tanımlanabilir. Sayfa içerisinde aynı özellikleri taşıyan yerler varsa özellikle yazı stilleri gibi (örneğin; başlıkların aynı renkte ya da boyutta olduğu yerler) Class kullanılmalıdır.
 
 CSS de ID # (diyez) işareti ile kullanılır.
+```css
 #idismi
 {
     position:absolute;
@@ -58,14 +59,15 @@ CSS de ID # (diyez) işareti ile kullanılır.
     width:150px;
 }
 
-
+```
 CSS de class .(nokta) işareti ile kullanılır.
-.menu 
+```css
+.menu
 {
     font-size:14px;
     color:#ff0000;
 }
-
+```
  Nerede Class Nerede ID Kullanmalıyım?
 
 Bunu örnekle açıklamak istiyorum. Varsayalım kütüphane açacağız. Öncelikle kitaplarımızı felsefe, psikoloji, polisiye ... gibi kategorilere bölmemiz gerekir ve kütüphanemizde bu kitaplara özel raflar oluşturmalıyız. İşte kitaplara özel oluşturulan bu raflara ID diyoruz. Her kitabın sayfa sayısı, yazı büyüklüğü, ebatları farklıdır. Değişik kitaplar aynı rafta toplanmıştır ve bu işleme de Class diyoruz.

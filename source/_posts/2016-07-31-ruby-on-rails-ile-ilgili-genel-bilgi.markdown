@@ -11,7 +11,8 @@ categories:
  Ruby nesne tabanlı bir programlama dili olup oldukça sade ve kısa bir sözdizimine (syntax) sahiptir. Zaten Ruby’nin temelinde bu sadelik ve kısalık söz konusudur. Karmaşık kodlar yerine gelişmiş uygulamaları kısa yoldan gerçekleştirebilir.
  Ruby on Rails ise, David Heinemeir Hansson’un başını çektiği Ruby dili ile yazılmış open source frameworktür. Şu an 3.2.RC1 versiyonu ortalıkta dolaşmaktadır. Ancak en güvenilir versiyon şu an için 3.1.1 dir.
  Bizde kendi ruby versiyonumuzu terminal yardımıyla öğrenebiliriz.Aşağıdaki komutu terminale yazalım.
- -$ ruby -version
+ <br>`-$ ruby -version`<br>
+
  Buradaki sayıların ne anlama geldiğine ve ne zamanlar değiştiğini inceleyelim.
  ruby 3.2.1 diye görüken ruby versiyonunda
  3 sayısı yapısal değişiklikleri gösterir ve yapısal değişiklik olunca versiyonumuz artık ruby 4.0.0 olarak gözükür.
@@ -32,13 +33,13 @@ Hansson’un railsde bir araya getirdiği teknik ve paradigmalardan bazıları:
     Pragmatic Programming
  
  Şimdi Rails ile yeni bir projeye nasıl başlanır onu görelim.Terminale aşağıdaki komutu yazalım.
- -$ rails new blog
+ <br>`-$ rails new blog`<br>
  Komut sayesinde Rails projemize başlamış sayılıyoruz.Daha sonra aşağıdaki komut ile Rails projemizin içine giriyoruz.
- -$ cd blog
+ <br>`-$ cd blog`<br>
  Sonrasında aşağıdaki komut ile yazdığımız ve enterladığımız anda gerekli databaseler bizim için oluşmuş oluyor.
- -$ rake db:migrate
+ <br>`-$ rake db:migrate`<br>
  Son olarak Rails projemizi görmek için aşağıdaki komutu terminale yazıyoruz
- -$ rails s
+ <br>`-$ rails s`<br>
  Ve artık projemizi görebiliriz.Bunun için arama motoruna http://localhost:3000 yazarız.
 
  Şimdi projemizin dosyalarını inceleyelim.
@@ -66,7 +67,7 @@ Hansson’un railsde bir araya getirdiği teknik ve paradigmalardan bazıları:
 
 
  Controller MVC modelinin en önemli kısmıdır. Rails’de controller, dış dünyadan yani kullanıcıdan istekleri kabul eder, gerekli işlemleri uygular ve sonuçları view katmanına gönderir. Web istekleri, değişkenlerin ve verilerin işlenmesi, çeşitli bilgiler için Model’e başvurulması, işlenen verilerin kayıt için tekrar Model’e yollanması gibi işlerin hepsi Controller sorumluluğundadır. Controller genellikle Model üzerindeki CRUD işlemlerini idare eder, view’da kullanılacak değişkenleri düzenler.
-
+```ruby
   def index
     # logic to list all recipes
   end
@@ -82,7 +83,7 @@ Hansson’un railsde bir araya getirdiği teknik ve paradigmalardan bazıları:
   def update
     # logic to update a particular recipe
   end
-
+```
 
 
  MVC yapısında View, uygulamanın kullanıcıya görünen yüzüdür. View’ın, Model ile yapacağı herhangi bir iletişim mutlaka Controller üzerinden gerçekleştirilmelidir! Bu sayede hem view temiz kalmış olur hemde MVC çatısından kopmamış oluruz.
