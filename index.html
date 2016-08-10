@@ -9,7 +9,7 @@
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="RUBY ON RAİLS İLE İLGİLİ GENEL BİLGİ Öncelikle bir süredir kullandığım Ruby dili ile yazılmış Ruby on Rails framework ünü tanımakla başlayalım.Daha &hellip;">
+  <meta name="description" content="Sass ile arkaplan resmi oluşturmak Bu yazımda web sayfamıza sass ile nasıl resim koyacağımıza ve yazının üstüne nasıl yazı yazacağımızı inceleyeceğiz &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,230 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/08/10/arkaplana-resim-yukleme/">Arkaplana Resim Yükleme</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-10T14:04:43+03:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>2:04 pm</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Sass ile arkaplan resmi oluşturmak</p>
+
+<p> Bu yazımda web sayfamıza sass ile nasıl resim koyacağımıza ve yazının üstüne nasıl yazı yazacağımızı inceleyeceğiz.
+ İlk öncelikle dosyamızın source / stylesheets kısmına geliyoruz ve <code>.css.sass</code> uzantılı bir dosya oluşturuyoruz.Bu dosya ile kullanmak istediğimiz resmin boyutunu ,genişliğini , üzerine yazacağımız yazının şeklini, boyutunu ,rengini ayarlayabiliriz.
+Şimdi sass dosyasında ile resmimizi ve üzerine yazacağımız yazının nasıl olacağını aşağıdaki komutla ayarlıyoruz.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.resim</span>
+</span><span class='line'>  <span class="na">background-image</span><span class="o">:</span> <span class="sx">url(&quot;http://tarfanlarorganik.com/wp-content/uploads/2016/04/Slider-3.jpg&quot;)</span>
+</span><span class='line'>  <span class="na">width</span><span class="o">:</span> <span class="mi">900</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">height</span><span class="o">:</span> <span class="mi">400</span><span class="kt">px</span>
+</span><span class='line'><span class="nc">.yazi</span>
+</span><span class='line'>  <span class="na">font-color</span><span class="o">:</span> <span class="nb">white</span>
+</span><span class='line'>  <span class="na">font-size</span><span class="o">:</span> <span class="mi">20</span><span class="kt">px</span>
+</span><span class='line'>  <span class="na">margin</span><span class="o">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">em</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> Yukarıda belirttiğimiz <code>margin: 0 0 0 15em</code> komutundaki 15em yazının ne kadar sağa kayacağını belirtiyor.Sayıyı arttırırsak yazımız o kadar sağa kayar.</p>
+
+<p>Şimdi index.html.haml sayfamızda sadece komutları çağırmamız lazım. <code>.yazi</code> yi <code>.resim</code> in içine yazıyoruz ki resmin üstüne yazı yazabilelim</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sass'><span class='line'><span class="nc">.resim</span>
+</span><span class='line'>  <span class="nc">.yazi</span>
+</span><span class='line'>    <span class="err">%</span><span class="nt">p</span> <span class="nt">Bu</span> <span class="nt">yaz</span><span class="err">ı</span> <span class="nt">sitemizde</span> <span class="nt">g</span><span class="err">ö</span><span class="nt">z</span><span class="err">ü</span><span class="nt">kecektir</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Artık resmimizi yerleştirdik ve üzerine yazımızıda yazmış olduk.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2016/08/10/neden-sass-kullanmaliyiz/">Neden Sass Kullanmalıyız?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-10T09:41:46+03:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>9:41 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>SASS Nedir?</p>
+
+<p>Syntactically Awesome Style Sheets ifadesinin kısaltması olan SASS, en popüler CSS ön-işlemcilerinden (pre-processing) biridir.Kendi resmi sitesinde ki ifadeye göre olgun,istikrarlı ve güçlü profesyonel seviyedeki CSS uzantı dilidir.</p>
+
+<p>Uzantı dilinden kasıt stil oluştururken CSS’de olmayan özellikleri kullanabiliyor olmamızdır.Kısaca Sass, CSS ile yaptığımız işleri daha kolay, hızlı ve düzenli hale getiren yardımcı bir araçtır.</p>
+
+<p>SASS özellikleri nelerdir?</p>
+
+<p>Sass genel olarak css derleyicisidir. Css sayesinde var olmuş fakat css’i teknik olarak geçmeyi başarmıştır.</p>
+
+<p>Sass, kendi sözdizimi ile yazılmış kodları CSS’e çevirir. Sass tarafından oluşturulan bu CSS dosyası projeye dahil edilerek kullanılır. Sass compile edilen diller gibi ekstra bir derleme komutu beklemez, çalıştığınız proje dizinini takip ederek, kaydedilen her “<em>.sass” ve “</em>.scss” dosyasını otomatik olarak saniyeler içinde derler ve kullanıma hazırlar.</p>
+
+<pre><code>Css’in değişken tanımlanılabilinen hali (Variables)
+Css’in tarayıcılar için yazdığımız ekstra kodları kendisi oluşturabilen hali(Mixins)
+Css’in girintileri fark ederek iç içe class’ları yazabilen hali (Nesting)
+Css dosyasında istediğimiz kodları istediğimiz yerde extend edebiliyoruz (Extend/Inheritance)
+Css dosyamızı parçalara ayırıp, ayırdığımız kısımları istediğimiz yerde çağırabiliyoruz (Import)
+Css dosyamızda çarpma,bölme toplama vs. yapabiliyorz. (Operators)
+</code></pre>
+
+<p>Şimdide yukarıda bahsettiğimiz özellikleri inceleyelim.</p>
+
+<p>Ariables: Sass’ta değişkenleri tanımlıyoruz</p>
+
+<pre><code>$header-font-style:  Helvetica, sans-serif
+$header-color: #000
+</code></pre>
+
+<p>Daha sonra değişkenleri aşağıdaki gibi çağırabiliyoruz.</p>
+
+<pre><code>.header
+  font: $header-font-style
+  color: $header-color
+</code></pre>
+
+<p>Nesting: Nesne girintilerine göre kod yazmak.Yine bu sayede sass işimizi kolaylaştırıyor.</p>
+
+<pre><code>#nav
+  ul
+   color: red
+  li
+   color: blue
+  a
+   color: green
+</code></pre>
+
+<p>Css çıktısı:</p>
+
+<pre><code>#nav ul {
+  color: red;
+}
+#nav li {
+  color: blue;
+}
+#nav a {
+  color: green;
+}
+</code></pre>
+
+<p>Partials ve @import: Kodlarımızı bölümleyip istediğimiz yerde import edebiliyoruz.</p>
+
+<pre><code>/* _reset.sass */
+body
+     margin: 0
+     padding: 0
+</code></pre>
+
+<p>Bu dosyayı asıl stil dosyamıza dahil edebiliyoruz.</p>
+
+<pre><code>/* base.sass */
+@import 'reset'
+</code></pre>
+
+<p>Mixins: Aşağıdaki komutu sass  dosyamızın üst kısmına tanımlıyoruz .</p>
+
+<pre><code>@mixin border-radius($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    -o-border-radius: $radius
+    border-radius: $radius
+</code></pre>
+
+<p>Mixin'i sass'da çağırıyoruz ve bu sayede üstteki komutu tekrar tekrar yazmayarak işimizi kolaylaştırmış oluyoruz.</p>
+
+<pre><code>.box
+    @include border-radius(10px)
+</code></pre>
+
+<p>Extend/Inheritance: class yada id'lerde kullandığımız özellikleri @extend özelliği ile bir sonraki class yada id mizin içinde kullanabiliyoruz.</p>
+
+<p>message class'ı için kodlarımız bunlar.</p>
+
+<pre><code>.message
+      border: 1px solid #ccc
+      padding: 10px
+      color: #333
+</code></pre>
+
+<p>Şimdide diğer class yada id'mizde bu kodları extend edelim.</p>
+
+<pre><code>.success
+      @extend .message
+      border-color: green
+.error
+      @extend .message
+      border-color: red
+</code></pre>
+
+<p>Operators: css özelliklerini yazarken operatorleri kullanabiliyoruz.</p>
+
+<pre><code>aside
+     float: right
+     width: 300px / 960px * 100%
+Css çıktısı:
+
+aside {
+    float: right;
+    width: 31.25%;
+}
+</code></pre>
+
+<p>Neden Sass Kullanmalıyım?</p>
+
+<p>Tanımını yaparken de açıkladığım gibi CSS’i daha elverişli hale getirir.Sass, programalama dillerinin sahip olduğu bazı özellikleri (değişkenler,fonksiyonlar), CSS de kullanabilmemizi sağlıyor ve bir nevi CSS’i basit bir dilden programlama diline çevirir.</p>
+
+<p>Binlerce satırlık CSS kodlarını daha hızlı yazmamızı,daha düzenli bir stil dosyası oluşturmamıza olanak tanır.Bu şekilde daha önce yazdığımız kodları kolay bir şekilde bulabiliriz.</p>
+
+<p>Kısacası CSS’i hantal bir yapıdan çıkarır ve daha dinamik bir yapıya döndürür.Sass’ın faydalarını esas olarak büyük projelerde farkedebiliriz.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -348,6 +572,14 @@ Active Record: Veritabanı ile iletişimi yönetir.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2016/08/10/arkaplana-resim-yukleme/">Arkaplana Resim Yükleme</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2016/08/10/neden-sass-kullanmaliyiz/">Neden Sass Kullanmalıyız?</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi/">Ruby on Rails Ile Ilgili Genel Bilgi</a>
