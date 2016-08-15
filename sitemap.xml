@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma/</loc>
+<lastmod>2016-08-15T15:06:14+03:00</lastmod>
+</url>
+<url>
+<loc>http://hmemis.github.io/blog/2016/08/15/bootstrap-ile-izgara-yontemi/</loc>
+<lastmod>2016-08-15T14:09:27+03:00</lastmod>
+</url>
+<url>
 <loc>http://hmemis.github.io/blog/2016/08/10/arkaplana-resim-yukleme/</loc>
 <lastmod>2016-08-10T14:04:43+03:00</lastmod>
 </url>

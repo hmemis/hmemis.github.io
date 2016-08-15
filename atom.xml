@@ -4,7 +4,7 @@
   <title><![CDATA[Hilal's Blog]]></title>
   <link href="http://hmemis.github.io/atom.xml" rel="self"/>
   <link href="http://hmemis.github.io/"/>
-  <updated>2016-08-10T16:10:06+03:00</updated>
+  <updated>2016-08-15T16:37:49+03:00</updated>
   <id>http://hmemis.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,122 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Sass Ile Kutu Oluşturma]]></title>
+    <link href="http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma/"/>
+    <updated>2016-08-15T15:06:14+03:00</updated>
+    <id>http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma</id>
+    <content type="html"><![CDATA[<p> Kutular web sayfası tasarlarken sıkça kullandığımız yardımcılardır. Bu yazımda d  3 adet kutuyu yanyana dizeceğiz.
+ Bunun için ilk olarak bir dış bölme tasarlayacağız daha sonra ise iç bölmeler ile bu alanı 3 adet kutu şekline dönüştüreceğiz.
+ O zaman şimdi site.css.sass kısmına bölmelerimizle ilgili özellikleri yazıyoruz.</p>
+
+<pre><code class="` sass">
+
+ #dis_bolme
+   width: 500px
+   height: 150px
+   background-color: white
+   margin: auto
+
+ .ic_bolme
+   float: left
+   width: 130px
+   height: 100px
+   background-color: white
+   margin: 51px
+   font-size: 7px
+</code></pre>
+
+<p>  Şimdi sırayla yukarıdaki komutların ne anlama geldiğine bakalım. <code>width</code> ve <code>height</code> diye bahsettiğimiz kısımlar oluşacak bölümlerin genişliğini ve uzunluğunu temsil ediyor.<code>background-color</code> arka planın rengini ayarlamamızı sağlıyor.<code>margin: auto</code> ise oluşturduğumuz dış bölmenin ortalanmasını sağlıyor.
+  Sırada iç bölmelerdeki kutuları incelemekte.<code>float: left</code> oluşturduğumuz kutuların yanyana olmasını sağlayan komuttur.
+  Şimdi kutularımızı index.html.haml kısmında oluşturalım.</p>
+
+<pre><code class="`` sass">  #dis_bolme
+    .ic_bolme
+
+    .ic_bolme
+
+    .ic_bolme
+
+    .ic_bolme
+</code></pre>
+
+<p>   Artık yanyana 3 adet bölmemiz oldu istediğimiz şekilde bu kutuların içine resim koyabilir yazı yazabiliriz.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Bootstrap Ile Izgara Yöntemi]]></title>
+    <link href="http://hmemis.github.io/blog/2016/08/15/bootstrap-ile-izgara-yontemi/"/>
+    <updated>2016-08-15T14:09:27+03:00</updated>
+    <id>http://hmemis.github.io/blog/2016/08/15/bootstrap-ile-izgara-yontemi</id>
+    <content type="html"><![CDATA[<p>  Bu yazımda ızgara yöntemini kısaca tanıyacağız ve kullanım şeklini inceleyeğiz.Kullanımı işimizi kolaylaştırır.Izgara (Grid) sistemleri sitemizin belli standarda uygun ve hızlı bir şekilde sayfa planını oluşturmamıza yarayan sistemlerdir.
+  İlk önce kodumuzu inceleyelim daha sonra bunun üzerinde konuşalım.</p>
+
+<pre><code class="`` bootstrap">  .container
+      .row
+        %br
+        .col-xs-3.col-sm-3.col-md-3.col-lg-2
+          .yazi-style2
+            Contact
+          .yazi-style
+            %br
+            VegeShop
+            %br
+            Warzywna 5/6
+            %br
+            87-100 Torun
+            %br
+            +47 791 054 214
+
+        .col-xs-3.col-sm-3.col-md-3.col-lg-2
+          .yazi-style2
+            Shop
+          .yazi-style
+            %br
+            Products
+            %br
+            Blog
+            %br
+            Help
+            %br
+            Terms
+
+        .col-xs-3.col-sm-3.col-md-3.col-lg-2
+          .yazi-style2
+            Shoppig
+          .yazi-style
+            %br
+            Delivery time
+            %br
+            Payments method
+            %br
+            Complaints and returns
+        .col-xs-3.col-sm-3.col-md-3.col-lg-2
+          .yazi-style2
+            Follow us on
+</code></pre>
+
+<p>   Izgara yönteminde 12 sütuna kadar uygun olarak ölçekler.Izgara kolonları ölçmek istediğiniz 12 hazır kolonların belirli numaraları tarafından oluşturulur. Örneğin üç eşit kolon için .col-xs-4 kullanılırdı.</p>
+
+<p>  <br> Bootstrap ızgara sistemi 3 ana yapıdan oluşur.
+  <br> Kapsayıcı (.container) <br>
+   Satırlar (.row)   <br>
+   Kolonlar (col-*) <br></p>
+
+<p>   Kapsayıcı (.container) :
+   Bootstrap ızgara sisteminde satırların tam yerleşmesi için bir kapsayıcı elemana ihtiyacı vardır. Kapsayıcı eleman siteye yapısına göre iki farklı sınıf alır.
+  <br> .container : sabit genişlikteki sitelerde <br>
+   .container-fluid : esnek yapılı sitelerde  <br></p>
+
+<p>   Satırlar (.row) :
+   Her 12’li kolonu kapsayan bir kapsayıcıdır. kolonlar float:left ile yan yana dizildiği için satır aynı zamanda taşan kolonları satır başı yaptırmaya yarar.
+   Ayrıca <code>.row</code> container'ın olmadığı yerlerde çalışmıyor.</p>
+
+<p>   Yukarıdaki komutumuza bakarsak <code>.container</code> ve <code>.row</code> komutları ile sayfa düzeninde ızgara sistemimiz oluşuyor ve <code>.col-xs-3.col-sm-3.col-md-3.col-lg-2</code> komutu sayesinde 12 lik ızgara sistemine göre yanyana 4 adet sütun oluşturmuş oluyoruz.Daha sonra bir tab boşluk ile sütuna yazmak istediklerimizi yazıyoruz.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Arkaplana Resim Yükleme]]></title>

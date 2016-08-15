@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Hilal's Blog</title>
+  <title>Sass Ile Kutu Oluşturma - Hilal's Blog</title>
   <meta name="author" content="Your Name">
 
   
-  <meta name="description" content="Blog Archive 2016 Sass Ile Kutu Oluşturma
-Aug 15 2016 Bootstrap Ile Izgara Yöntemi
-Aug 15 2016 Arkaplana Resim Yükleme
-Aug 10 2016 Neden Sass &hellip;">
+  <meta name="description" content="Kutular web sayfası tasarlarken sıkça kullandığımız yardımcılardır. Bu yazımda d 3 adet kutuyu yanyana dizeceğiz. Bunun için ilk olarak bir dış &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Aug 10 2016 Neden Sass &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://hmemis.github.io/blog/archives/">
+  <link rel="canonical" href="http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Hilal's Blog" type="application/atom+xml">
@@ -67,81 +64,99 @@ Aug 10 2016 Neden Sass &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">Sass Ile Kutu Oluşturma</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2016-08-15T15:06:14+03:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:06 pm</span></time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p> Kutular web sayfası tasarlarken sıkça kullandığımız yardımcılardır. Bu yazımda d  3 adet kutuyu yanyana dizeceğiz.
+ Bunun için ilk olarak bir dış bölme tasarlayacağız daha sonra ise iç bölmeler ile bu alanı 3 adet kutu şekline dönüştüreceğiz.
+ O zaman şimdi site.css.sass kısmına bölmelerimizle ilgili özellikleri yazıyoruz.</p>
 
-  
-  <h2>2016</h2>
+<pre><code class="` sass">
 
-<article>
-  
-<h1><a href="/blog/2016/08/15/sass-ile-kutu-olusturma/">Sass Ile Kutu Oluşturma</a></h1>
-<time datetime="2016-08-15T15:06:14+03:00" pubdate><span class='month'>Aug</span> <span class='day'>15</span> <span class='year'>2016</span></time>
+ #dis_bolme
+   width: 500px
+   height: 150px
+   background-color: white
+   margin: auto
 
+ .ic_bolme
+   float: left
+   width: 130px
+   height: 100px
+   background-color: white
+   margin: 51px
+   font-size: 7px
+</code></pre>
 
-</article>
+<p>  Şimdi sırayla yukarıdaki komutların ne anlama geldiğine bakalım. <code>width</code> ve <code>height</code> diye bahsettiğimiz kısımlar oluşacak bölümlerin genişliğini ve uzunluğunu temsil ediyor.<code>background-color</code> arka planın rengini ayarlamamızı sağlıyor.<code>margin: auto</code> ise oluşturduğumuz dış bölmenin ortalanmasını sağlıyor.
+  Sırada iç bölmelerdeki kutuları incelemekte.<code>float: left</code> oluşturduğumuz kutuların yanyana olmasını sağlayan komuttur.
+  Şimdi kutularımızı index.html.haml kısmında oluşturalım.</p>
 
+<pre><code class="`` sass">  #dis_bolme
+    .ic_bolme
 
+    .ic_bolme
 
-<article>
-  
-<h1><a href="/blog/2016/08/15/bootstrap-ile-izgara-yontemi/">Bootstrap Ile Izgara Yöntemi</a></h1>
-<time datetime="2016-08-15T14:09:27+03:00" pubdate><span class='month'>Aug</span> <span class='day'>15</span> <span class='year'>2016</span></time>
+    .ic_bolme
 
+    .ic_bolme
+</code></pre>
 
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/08/10/arkaplana-resim-yukleme/">Arkaplana Resim Yükleme</a></h1>
-<time datetime="2016-08-10T14:04:43+03:00" pubdate><span class='month'>Aug</span> <span class='day'>10</span> <span class='year'>2016</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/08/10/neden-sass-kullanmaliyiz/">Neden Sass Kullanmalıyız?</a></h1>
-<time datetime="2016-08-10T09:41:46+03:00" pubdate><span class='month'>Aug</span> <span class='day'>10</span> <span class='year'>2016</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/07/31/ruby-on-rails-ile-ilgili-genel-bilgi/">Ruby on Rails Ile Ilgili Genel Bilgi</a></h1>
-<time datetime="2016-07-31T21:11:14+03:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2016</span></time>
-
-
-</article>
-
-
-
-<article>
-  
-<h1><a href="/blog/2016/07/31/haml-html-css/">Haml - Html - Css</a></h1>
-<time datetime="2016-07-31T18:24:39+03:00" pubdate><span class='month'>Jul</span> <span class='day'>31</span> <span class='year'>2016</span></time>
-
-
-</article>
-
+<p>   Artık yanyana 3 adet bölmemiz oldu istediğimiz şekilde bu kutuların içine resim koyabilir yazı yazabiliriz.</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2016-08-15T15:06:14+03:00'><span class='date'><span class='date-month'>Aug</span> <span class='date-day'>15</span><span class='date-suffix'>th</span>, <span class='date-year'>2016</span></span> <span class='time'>3:06 pm</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma/" data-via="" data-counturl="http://hmemis.github.io/blog/2016/08/15/sass-ile-kutu-olusturma/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2016/08/15/bootstrap-ile-izgara-yontemi/" title="Previous Post: Bootstrap ile Izgara Yöntemi">&laquo; Bootstrap ile Izgara Yöntemi</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>
