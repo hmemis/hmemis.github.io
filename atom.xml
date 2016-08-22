@@ -4,7 +4,7 @@
   <title><![CDATA[Hilal's Blog]]></title>
   <link href="http://hmemis.github.io/atom.xml" rel="self"/>
   <link href="http://hmemis.github.io/"/>
-  <updated>2016-08-15T16:37:49+03:00</updated>
+  <updated>2016-08-22T11:00:29+03:00</updated>
   <id>http://hmemis.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,6 +12,63 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Carousel Ve Parallax]]></title>
+    <link href="http://hmemis.github.io/blog/2016/08/22/carousel-ve-parallax/"/>
+    <updated>2016-08-22T10:32:14+03:00</updated>
+    <id>http://hmemis.github.io/blog/2016/08/22/carousel-ve-parallax</id>
+    <content type="html"><![CDATA[<p>   CAROUSEL NEDİR?</p>
+
+<p>   Carousel hazırladığım resim veya yazıların slayt gösterisi şeklinde olmasını sağlıyor.Carousel kodunu JavaSprict kodu olarak vericeğim için ilk öncelikle Java ile bağlantıyı kurmamız gerekmektedir.
+   Bunun için layout.html.haml sayfasına <code>= javascript_include_tag '//code.jquery.com/jquery-3.1.0.js','//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', :all</code> kodunu yapıştımalıyız.
+   Artık kodumuzu yazdığımız zaman hata almayacağız.Şimdi ise aşağıdaki carousel kodunu inceleyelim.</p>
+
+<pre><code class="``` sass">   #carousel-example-generic.carousel.slide{"data-ride" =&gt; "carousel"}
+     / Indicators
+     %ol.carousel-indicators
+       %li.active{"data-slide-to" =&gt; "0", "data-target" =&gt; "#carousel-example-generic"}
+       %li{"data-slide-to" =&gt; "1", "data-target" =&gt; "#carousel-example-generic"}
+       %li{"data-slide-to" =&gt; "2", "data-target" =&gt; "#carousel-example-generic"}
+     / Wrapper for slides
+     .carousel-inner{:role =&gt; "listbox"}
+       .item.active
+         %img{:alt =&gt; "...", :src =&gt; "..."}/
+         .carousel-caption
+           \...
+       .item
+         %img{:alt =&gt; "...", :src =&gt; "..."}/
+         .carousel-caption
+           \...
+       \...
+     / Controls
+     %a.left.carousel-control{"data-slide" =&gt; "prev", :href =&gt; "#carousel-example-generic", :role =&gt; "button"}
+       %span.glyphicon.glyphicon-chevron-left{"aria-hidden" =&gt; "true"}
+       %span.sr-only Previous
+     %a.right.carousel-control{"data-slide" =&gt; "next", :href =&gt; "#carousel-example-generic", :role =&gt; "button"}
+       %span.glyphicon.glyphicon-chevron-right{"aria-hidden" =&gt; "true"}
+       %span.sr-only Next
+</code></pre>
+
+<p>   İç içe carousel belirtilemez.Ayrıca yukarIdaki item kısımlarını arttırıp slaytın daha fazla sayfalı olmasını ayarlayabiliriz.</p>
+
+<p>   PARALLAX NEDİR?</p>
+
+<p>   Paralax durağan nesnelerin farklı zamanda gözlenen doğrultuda ilerlemesi ile meydana gelen değişimlerdir ve web sayfamızın dikkat çekici görünmesine yardımcı olur.</p>
+
+<pre><code class="``` sass">   .parallax 
+       background-image: url("img_parallax.jpg");
+       height: 500px;
+       width:1000px
+       background-attachment: fixed;
+       background-position: center;
+       background-size: cover;
+</code></pre>
+
+<p>   Yukarıdaki komutumuzu inceleyecek olursak ilk önce resmimizi tanımlayıp daha sonra boyutlarını belirlemişiz. <code>background-attachment: fixed</code> komutu ile parallax'ı gerçekleştirmiş oluyoruz ve artık yüklediğimiz resim belirtilen ölçülerde aşağıya doğru kayabiliyor.
+   <code>background-size: cover</code> komutu ise resmimizin belirtilen ölçülere göre ayarlanmasını sağlıyor.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sass Ile Kutu Oluşturma]]></title>
